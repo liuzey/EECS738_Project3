@@ -3,7 +3,7 @@ EECS738 Machine Learning course project3. Two deep neural networks have been imp
 
 ## Function Checklist
 These functions are implemented manually in this project in a detailed manner:
-* Fully-connected layers.
+* Fully-Connected layers.
 * Convolutional layers.
 * BatchNormalization2d/1d.
 * Dropout.
