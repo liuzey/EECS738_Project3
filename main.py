@@ -4,7 +4,7 @@ import time
 import sys
 import copy
 import argparse
-from datasets import GDataLoader # , CDataLoader
+from datasets import GDataLoader
 from MLP import MLP
 from CNN import CNN
 from mnist import MNIST
@@ -26,11 +26,14 @@ def load_data(_train=True, dataname='gtsrb'):
     if dataname == 'mnist':
         mndata = MNIST('./mnist/raw/')
         mndata.gz = False
-        train_input, train_output = mndata.load_training()
-        train_input = np.array(train_input)
-        train_ouput = np.array(train_output)
-        dataloader = [(train_input[i*BATCH_SIZE:(i+1)*BATCH_SIZE], train_ouput[i*BATCH_SIZE:(i+1)*BATCH_SIZE])
-                      for i in range(train_input.shape[0]//BATCH_SIZE)]
+        if _train:
+            images, labels = mndata.load_training()
+        else:
+            images, labels = mndata.load_testing()
+        images = np.array(images)
+        labels = np.array(labels)
+        dataloader = [(images[i*BATCH_SIZE:(i+1)*BATCH_SIZE], labels[i*BATCH_SIZE:(i+1)*BATCH_SIZE])
+                      for i in range(images.shape[0]//BATCH_SIZE)]
     elif dataname == 'gtsrb':
         data = GDataLoader('./GTSRB/', train, BATCH_SIZE)
         dataloader = data.stack_in_batch()
