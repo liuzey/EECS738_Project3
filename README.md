@@ -9,8 +9,8 @@ These functions are implemented manually in this project in a detailed manner:
 * Dropout.
 * Maxpooling.
 * Activation functions: Sigmoid and ReLU.
-* Data loading and prepossessing (normalization).
-* Backpropagation using BGD.
+* Data loading and data prepossessing (normalization).
+* Forwarding and backpropagation using BGD.
 * Cross-entropy loss.
 
 
