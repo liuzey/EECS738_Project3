@@ -1,5 +1,5 @@
 # EECS738 Project3 Says One Neuron To Another
-EECS738 Machine Learning course project3. Two deep neural networks have been implemented: a Multilayer Perceptron (MLP) with multiple linear layers and a typical Convolutional Neural Network (CNN). Two image datasets are selected: **MNIST** handwriting characters and **GTSRB** traffic sign recognition. The only third-party packages used in all implementations are **numpy**, **pandas**, **python-mnist** and **PIL**.
+EECS738 Machine Learning course project3. Two deep neural networks have been implemented: a Multilayer Perceptron (MLP) with multiple linear layers and a typical Convolutional Neural Network (CNN). Two image datasets are selected: **MNIST** handwriting characters and **GTSRB** traffic sign recognition. The only third-party packages used in all implementations are **numpy**, **pandas**, **python-mnist** and **Pillow**.
 
 ## Function Checklist
 These functions are implemented manually in this project in a detailed manner:
