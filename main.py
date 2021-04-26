@@ -1,3 +1,9 @@
+# This is for Project3 - Save one neuron to another in course EECS738 Machine Learning.
+# Written by Zeyan Liu (StudentID: 3001190).
+# Run command example:
+# {python main.py 'mnist'} for digits classification from scratch without saving.
+# {python main.py 'gtsrb' -s 1 -p 1} for traffic sign recognition with parameters pretrained and results saved.
+
 import numpy as np
 import os
 import time
