@@ -6,6 +6,7 @@ import copy
 import argparse
 from datasets import GDataLoader # , CDataLoader
 from MLP import MLP
+from CNN import CNN
 from mnist import MNIST
 
 LEARNING_RATE = 1e-3
@@ -68,13 +69,13 @@ def test(model, dataloader):
     model.train = True
     n_correct = 0
     len_dataloader = len(dataloader)
-    for i in range(1, len_dataloader + 1):
+    for i in range(len_dataloader):
         pack = dataloader[i]
         img, label = pack[0], pack[1]
         class_output = model.forward(img)
         pred = np.argmax(class_output, 1)
         n_correct += (pred[1] == label).sum()
-        print(n_correct)
+        # print(n_correct)
 
     accu = float(n_correct) / (len(dataloader)*BATCH_SIZE) * 100
     print('Accuracy on {} dataset: {:.4f}%'.format(args.data, accu))
@@ -83,10 +84,14 @@ def test(model, dataloader):
 
 if __name__ == '__main__':
     train_data = load_data(_train=True, dataname=args.data)
-    # test_data = load_data(_train=False, dataname=args.data)
-    # model = CNN(CLASS_NUM[args.data])
-    model = MLP(CLASS_NUM[args.data])
-    if args.p:
-        model.load('./paras/')
-    train(model, train_data)
-    # _ = test(model, test_data)
+    test_data = load_data(_train=False, dataname=args.data)
+    if args.data == 'mnist':
+        model = MLP(CLASS_NUM[args.data])
+        if args.p:
+            model.load('./paras/')
+    elif args.data == 'gtsrb':
+        model = CNN(CLASS_NUM[args.data])
+        if args.p:
+            model.load('./paras_save/')
+    # train(model, train_data)
+    _ = test(model, test_data)
