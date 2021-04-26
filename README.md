@@ -15,9 +15,8 @@ These functions are implemented manually in this project in a detailed manner:
 
 
 ## Dataset
-* [Shakespeare Plays.](https://www.kaggle.com/kingburrito666/shakespeare-plays) This dataset contains all Shakespeare's plays. The raw text file is used.
-
-If you'd like to use your own data, please put them under ['data'](https://github.com/liuzey/EECS738_Project2/tree/main/data) and input the filename for training/testing. Pay attention to data preprocessing, e.g. [punctuation removal](https://github.com/liuzey/EECS738_Project2/blob/d5351c0f37cb108852f6ae24dc9216af31a128a7/main.py#L25). In my implementation, I keep the full stop marks as I think they are essential in identifying semantic endings.
+* [Modified National Institute of Standards and Technology database(MNIST)](http://yann.lecun.com/exdb/mnist/). This is possibly one of the most commonly-used and simplest datasetin image tasks in machine learning, which combines with different images of hand-written digits. The sizes of training dataset and testing dataset are 60,000 and 10,000 each. Though the attached webpage link seems not to be working, the dataset can be directly accessed by package [python-mnist](https://github.com/sorki/python-mnist). Images and grey-scale with a size of 28\*28 each. Ten labels in total ranges from 0, 1, 2... to 9. 
+* [The German Traffic Sign Recognition Benchmark(GTSRB)](https://benchmark.ini.rub.de/gtsrb_dataset.html) 
 
 
 ## Ideas and Theoretical Basis
@@ -93,11 +92,7 @@ Here are some predicted words by trained HMM: (Default 2 words to come)
 - [x] Commit your source code, documentation and other supporting files to the git repository in GitHub.
 
 ## Reference
-* Baum–Welch algorithm - Wikipedia. https://en.wikipedia.org/wiki/Baum%E2%80%93Welch_algorithm
-* Hidden Markov Models - scikit-learn. https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/modules/generated/sklearn.hmm.GaussianHMM.html
-* hmmlearn - Github. https://github.com/hmmlearn/hmmlearn
-* https://towardsdatascience.com/hidden-markov-model-implemented-from-scratch-72865bda430e
-* https://www.fing.edu.uy/~alopeza/biohpc/papers/hmm/Eddy-What-is-a-HMM-ATG4-preprint.pdf
-* nltk.tokenize package - NLTK 3.5 documentation. https://www.nltk.org/api/nltk.tokenize.html
-* Random sampling - Numpy Api Reference. https://numpy.org/doc/stable/reference/random/
+* MNIST - Wikipedia. https://en.wikipedia.org/wiki/MNIST_database
+* GTSRB Dataset - Institut für Neuroinformatik. https://benchmark.ini.rub.de/gtsrb_dataset.html
+* Python-mnist - Github. https://github.com/sorki/python-mnist
 
