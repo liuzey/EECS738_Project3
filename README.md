@@ -1,5 +1,18 @@
 # EECS738 Project3 Says One Neuron To Another
-EECS738 Machine Learning course project3. Two deep neural networks have been implemented: 
+EECS738 Machine Learning course project3. Two deep neural networks have been implemented: a Multilayer Perceptron (MLP) with multiple linear layers and a typical Convolutional Neural Network (CNN). Two image datasets are selected: **MNIST** handwriting characters and **GTSRB** traffic sign recognition. The only third-party packages used in all implementations are **numpy**, **pandas**, **python-mnist** and **PIL**.
+
+## Function Checklist
+These functions are implemented in this project in a detailed manner:
+* Fully-connected layers.
+* Convolutional layers.
+* BatchNormalization2d/1d.
+* Dropout.
+* Maxpooling.
+* Activation functions: Sigmoid and ReLU.
+* Data loading and prepossessing (normalization).
+* Backpropagation using BGD.
+* Cross-entropy loss.
+
 
 ## Dataset
 * [Shakespeare Plays.](https://www.kaggle.com/kingburrito666/shakespeare-plays) This dataset contains all Shakespeare's plays. The raw text file is used.
