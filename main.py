@@ -102,5 +102,5 @@ if __name__ == '__main__':
         model = CNN(CLASS_NUM[args.data])
         if args.p:
             model.load('./paras_save/')
-    # train(model, train_data)
+    train(model, train_data)
     _ = test(model, test_data)
