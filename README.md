@@ -80,17 +80,34 @@ For this convolutional neural network in this project, the convolutional kernels
 
 ## Technical Details
 ### Activations
-[Sigmoid]()
+[Sigmoid](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/MLP.py#L94):
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/Sigmoid-function.JPG)
 
-[ReLU]()
+[ReLU](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/MLP.py#L49) returns the non-negative value of inputs.
 
 ### Dropout
+[Dropout](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/MLP.py#L80) turns values into 0 at a probability of 50% in training phase, and multiplies value by 0.5 in testing phase.
 
 ### Batch Normalization
+[BatchNorm](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/CNN.py#L136) follows the similar procedure as normalization over batch, but the final inputs is weighted by gamma and added bias beta. The gamma and beta are adjusted in the training phase. In the testing phase, the outputs are calculated with remembered global values.
 
 ### Convolutional Layer
+[Forwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L15):
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/05.gif
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/06.gif
+
+[Backwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L34):
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/07.gif
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/08.gif
 
 ### Fully-connected Layer
+[Forwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L57):
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/02.gif
+
+[Backwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L64):
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/01.gif
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/03.gif
+![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/04.gif
 
 
 ## Notes
