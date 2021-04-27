@@ -63,6 +63,7 @@ The structure of the MLP model used in MNIST task is
 | :-------------: |
 | FC1(1\*28\*28, 100)  |
 | FC2(100, 10)  |
+All linear layers have biases.
 
 ### CNN
 For this convolutional neural network in this project, the convolutional kernels is set at (3,3). The structure of the CNN model used in GTSRB task is 
@@ -77,13 +78,27 @@ For this convolutional neural network in this project, the convolutional kernels
 | FC1(128\*5\*5, 100), ReLU |
 | FC2(100, 43) |
 
+## Technical Details
+### Activations
+[Sigmoid]()
+
+[ReLU]()
+
+### Dropout
+
+### Batch Normalization
+
+### Convolutional Layer
+
+### Fully-connected Layer
+
 
 ## Notes
 * Cross entropy loss is only used for printing in a perceptual manner in MLP, but does not participate in actual backpropagation. For CNN records, the loss is the sum of gradient in the last layer.
 * Training the CNN for GTSRB can be highly time-consuming, which needs my further improvements.
 * I've tried different MLP structures in MNIST task and different learning rates.
 * I find it difficult to choose initial parameters, especially for linear layers in adopted rough propagation/gradient strategy. The large dimensions will often make the results big and shrink difference between features, losing expressive ability in sigmoid activations and causing troubles in exponential calculations in softmax. 
-* In the final version, maxpooling and BatchNormaliztion1d are eliminated for simplification. For maxpooling, the backpropagation requires more work. For batch1d, it makes values deviated largely and result in minus values, which requires more 
+* In the final version, maxpooling and BatchNormaliztion1d are eliminated for simplification. For maxpooling, the backpropagation requires more work. For batch1d, it makes values deviated largely and result in minus values, which requires more work. Maxpooling should be implemented in a very similar way as Dropout function.
 
 ## Schedule
 - [x] Set up a new git repository in your GitHub account
