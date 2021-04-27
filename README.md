@@ -69,20 +69,12 @@ For this convolutional neural network in this project, the convolutional kernels
 
 | CNN  |
 | :-------------: |
-| Conv1(channels=32, stride=(1, 1), padding=(0, 0)) |
-| BatchNorm(32) |
-| ReLU |
+| Conv1(channels=32, stride=(1, 1), padding=(0, 0)), BatchNorm(32), ReLU |
 | Conv2(channels=64, stride=(2, 2), padding=(1, 1)) |
-| Conv3(channels=64, stride=(1, 1), padding=(0, 0)) |
-| BatchNorm(64) |
-| ReLU |
-| Dropout |
+| Conv3(channels=64, stride=(1, 1), padding=(0, 0)), BatchNorm(64), ReLU, Dropout |
 | Conv4(channels=128, stride=(2, 2), padding=(1, 1)) |
-| Conv5(channels=128, stride=(1, 1), padding=(0, 0)) |
-| BatchNorm(128) |
-| ReLU |
-| FC1(128\*5\*5, 100) |
-| ReLU |
+| Conv5(channels=128, stride=(1, 1), padding=(0, 0)), BatchNorm(128), ReLU |
+| FC1(128\*5\*5, 100), ReLU |
 | FC2(100, 43) |
 
 
