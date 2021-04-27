@@ -22,8 +22,8 @@ These functions are implemented manually in this project in a detailed manner:
 ## Ideas and Thinking
 * **DNN**: In my opinion, deep neural networks are basically a complex but repetitive variant of weighted function with non-linear operators added. What deep learning does is to tweak the weights gradually by iterating over a large (usually) number of examples. If taking a task as a process of building sand castles, the precise solution will be like building by crafting structures and shapes, and the deep learning will be like flapping and rubbing by frequently looking at samples. Outcome of deep learning are set of parameters to mimic and map certain features, known as saliency, to high confidence scores in exact dimension. This 'learning' process imitates the process of human learning (recognition or understanding), setting up correlations between 'name/meaning' and 'features' thourgh repetitive getting exposed to examples and strengthening neuron connections.  
 * **Activation Functions**: An important component of deep learning is activation function, which significantly accounts for deep learning's success. The non-linear properties of deep learning are largely contributions of activations. What activations really does is to differentiate neurons to respond to unique features. After activation, some of the neurons will be silent for specific features, while others will not. In this way, the deep neural networks are no longer an inflexible combination of weighted values, but a instead dynamic system where each unit has a 'switch'. This is done mainly by the cut-off (e.g. ReLU) or downgrade (e.g. Sigmoid) in gradients in backpropagation. Once a neuron get silent for certain feature distribution, little changes will be witnessed in its parameters when updating. In forwarding cases, different parts of neurons will 'switch on' for different feature distribution, which greatly increase the fitting ability of the function in limited parameter space.
-* **Backpropagation**: Backpropagation is a rather simple but important process. By calculating the partial gradient of the neuron output over model parameters, the paraemters are updated from layer to layer to increase highly-activated neurons' contribution to current label, and decrease noises from unrelated neurons.
-* **Testing**: After iterations over training samples, the model parameters are tuned to distribution of the task domain, which expects the ability to guide new examples from the same domain into explainable outputs. Different from training, some operators, e.g. dropout and batch normalization, tend to stay static in testing phase to expect stable behaviors e.g. to eliminate quantity influence and random errors.
+* **Backpropagation**: Backpropagation is a rather simple but important process. By calculating the partial gradient of the model output over parameters, the paraemters are updated from layer to layer to increase highly-activated neurons' contribution to current label, and decrease noises from unrelated neurons.
+* **Testing**: After iterations over training samples, the model parameters are tuned to distribution of the task domain, which expects the ability to guide new examples from the same domain into explainable outputs. Different from training, some operators, e.g. dropout and batch normalization, tend to stay static in testing phase to expect stable behaviors, e.g. to eliminate quantity influence and random errors.
 
 ## Setup
 ### Environment
@@ -44,9 +44,17 @@ pip install -r requirements.txt
 * **-p**: Whether to load pre-trained model parameters. The parameters for MNIST model is saved in ['./paras'](https://github.com/liuzey/EECS738_Project3/tree/main/paras). The parameters for GTSRB model is saved in ['./paras_save'](https://github.com/liuzey/EECS738_Project3/tree/main/paras_save). (Default: False).
 * **-s**: Whether to save the trained model parameters (Default: False).
 
+### Example
+```bash
+python main.py 'gtsrb' -s 1 -p 1
+```
+* 'gtsrb': GTSRB recognition task.
+* -p: Model parameters are pre-trained and loaded.
+* -s: Trained parameters are saved periodically.
+
 
 ## Result Analysis 
-Training records adn results are saved in ['./records'](https://github.com/liuzey/EECS738_Project3/tree/main/records), which shows indeed a decrease in loss. This indicates the training is working in some sense. However, the accuracy doesn't show great improvements.
+Training records and results are saved in ['./records'](https://github.com/liuzey/EECS738_Project3/tree/main/records), which shows indeed a decrease in loss. This indicates the training is working in some sense. However, the accuracy doesn't show great improvements.
 
 ## Notes
 * I find it difficult to choose initial parameters, especially for linear layers in adopted rough propagation/gradient strategy. The large dimensions will often make the results big and shrink difference between features, losing expressive ability in sigmoid activations and causing troubles in exponential calculations in softmax. 
