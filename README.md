@@ -59,6 +59,8 @@ Training records and results are saved in ['./records'](https://github.com/liuze
 ### MLP
 The structure of the MLP model used in MNIST task is 
 
+| MLP  |
+| ------------- |
 | FC1(1\*28\*28, 100)  |
 | FC2(100, 10)  |
 
