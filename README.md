@@ -95,24 +95,24 @@ For this convolutional neural network in this project, the convolutional kernels
 ### Convolutional Layer
 [Forwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L15):
 
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/05.gif
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/06.gif
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/05.gif)
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/06.gif)
 
 [Backwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L34):
 
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/07.gif
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/08.gif
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/07.gif)
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/08.gif)
 
 ### Fully-connected Layer
 [Forwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L57):
 
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/02.gif
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/02.gif)
 
 [Backwarding](https://github.com/liuzey/EECS738_Project3/blob/e65024acd5599e13549a8742eb563814eb168b1a/layers.py#L64):
 
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/01.gif
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/03.gif
-![]https://github.com/liuzey/EECS738_Project3/blob/main/formula/04.gif
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/01.gif)
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/03.gif)
+![](https://github.com/liuzey/EECS738_Project3/blob/main/formula/04.gif)
 
 
 ## Notes
