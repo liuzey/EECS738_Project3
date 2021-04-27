@@ -36,7 +36,7 @@ These functions are implemented manually in this project in a detailed manner:
 ```bash
 pip install -r requirements.txt
 ``` 
-* I've updated my environment to python3.9 and there is inconsistency between my previous project and this one. Sorry for any possible troubles.
+* I've updated my environment to python3.9 and there is inconsistency between my previous course projects and this one. Sorry for any possible troubles.
 
 ## Usage
 ### Positional & Optional Parameters
