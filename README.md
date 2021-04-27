@@ -65,25 +65,25 @@ The structure of the MLP model used in MNIST task is
 | FC2(100, 10)  |
 
 ### CNN
-The structure of the CNN model used in GTSRB task is 
+For this convolutional neural network in this project, the convolutional kernels is set at (3,3). The structure of the CNN model used in GTSRB task is 
 
 | CNN  |
 | :-------------: |
-| Conv1 |
-| BatchNorm |
+| Conv1(channels=32, stride=(1, 1), padding=(0, 0)) |
+| BatchNorm(32) |
 | ReLU |
-| Conv2 |
-| Conv3 |
-| BatchNorm |
+| Conv2(channels=64, stride=(2, 2), padding=(1, 1)) |
+| Conv3(channels=64, stride=(1, 1), padding=(0, 0)) |
+| BatchNorm(64) |
 | ReLU |
 | Dropout |
-| Conv4 |
-| Conv5 |
-| BatchNorm |
+| Conv4(channels=128, stride=(2, 2), padding=(1, 1)) |
+| Conv5(channels=128, stride=(1, 1), padding=(0, 0)) |
+| BatchNorm(128) |
 | ReLU |
-| FC1 |
+| FC1(128\*5\*5, 100) |
 | ReLU |
-| FC2 |
+| FC2(100, 43) |
 
 
 ## Notes
