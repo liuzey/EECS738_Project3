@@ -142,4 +142,12 @@ Convolutionalk kernel operation:
 * MNIST - Wikipedia. https://en.wikipedia.org/wiki/MNIST_database
 * GTSRB Dataset - Institut für Neuroinformatik. https://benchmark.ini.rub.de/gtsrb_dataset.html
 * Python-mnist - Github. https://github.com/sorki/python-mnist
+* Simple-Convolutional-Neural-Network - Github. https://github.com/zhangjh915/Simple-Convolutional-Neural-Network
+* Numpy.random - Numpy API. https://numpy.org/doc/stable/reference/random/
+* A Gentle Introduction to Cross-Entropy for Machine Learning. https://machinelearningmastery.com/cross-entropy-for-machine-learning/
+* Softmax Activation Function with Python. https://machinelearningmastery.com/softmax-activation-function-with-python/
+* BatchNorm2D - Pytorch Docs. https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm2d.html
+* Torch.optim - Pytorch Docs. https://pytorch.org/docs/stable/optim.html
+* batch-norm - Github. https://github.com/anuvindbhat/batch-norm
+* Python PIL | Image.resize() method - GeeksforGeeks. https://www.geeksforgeeks.org/python-pil-image-resize-method/
 
