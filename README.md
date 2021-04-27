@@ -57,9 +57,30 @@ python main.py 'gtsrb' -s 1 -p 1
 Training records and results are saved in ['./records'](https://github.com/liuzey/EECS738_Project3/tree/main/records), which shows indeed a decrease in loss. This indicates the training is working in some sense. However, the accuracy doesn't show great improvements. This is a rough implementation od neural networks, which has much space for improvementes, especially gradient calculation. I remain these as my future work.
 
 ### MLP
-The structure of the MLP model is 
-| FC(1\*28\*28, 100)  |
-| FC(100, 10)  |
+The structure of the MLP model used in MNIST task is 
+
+| FC1(1\*28\*28, 100)  |
+| FC2(100, 10)  |
+
+### CNN
+The structure of the CNN model used in GTSRB task is 
+
+| Conv1 |
+| BatchNorm |
+| ReLU |
+| Conv2 |
+| Conv3 |
+| BatchNorm |
+| ReLU |
+| Dropout |
+| Conv4 |
+| Conv5 |
+| BatchNorm |
+| ReLU |
+| FC1 |
+| ReLU |
+| FC2 |
+
 
 ## Notes
 * Cross entropy loss is only used for printing in a perceptual manner in MLP, but does not participate in actual backpropagation. For CNN records, the loss is the sum of gradient in the last layer.
