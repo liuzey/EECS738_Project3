@@ -60,13 +60,15 @@ Training records and results are saved in ['./records'](https://github.com/liuze
 The structure of the MLP model used in MNIST task is 
 
 | MLP  |
-| ------------- |
+| :-------------: |
 | FC1(1\*28\*28, 100)  |
 | FC2(100, 10)  |
 
 ### CNN
 The structure of the CNN model used in GTSRB task is 
 
+| CNN  |
+| :-------------: |
 | Conv1 |
 | BatchNorm |
 | ReLU |
