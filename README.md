@@ -54,9 +54,11 @@ python main.py 'gtsrb' -s 1 -p 1
 
 
 ## Result Analysis 
-Training records and results are saved in ['./records'](https://github.com/liuzey/EECS738_Project3/tree/main/records), which shows indeed a decrease in loss. This indicates the training is working in some sense. However, the accuracy doesn't show great improvements.
+Training records and results are saved in ['./records'](https://github.com/liuzey/EECS738_Project3/tree/main/records), which shows indeed a decrease in loss. This indicates the training is working in some sense. However, the accuracy doesn't show great improvements. This is a rough implementation od neural networks, which has much space for improvementes, especially gradient calculation. I remain these as my future work.
 
 ## Notes
+* Training the CNN for GTSRB can be highly time-consuming, which needs my further improvements.
+* I've tried different MLP structures in MNIST task and different learning rates.
 * I find it difficult to choose initial parameters, especially for linear layers in adopted rough propagation/gradient strategy. The large dimensions will often make the results big and shrink difference between features, losing expressive ability in sigmoid activations and causing troubles in exponential calculations in softmax. 
 * In the final version, maxpooling and BatchNormaliztion1d are eliminated for simplification. For maxpooling, the backpropagation requires more work. For batch1d, it makes values deviated largely and result in minus values, which requires more 
 
