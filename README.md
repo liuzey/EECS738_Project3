@@ -54,12 +54,12 @@ Training records adn results are saved in ['./records'](https://github.com/liuze
 
 ## Schedule
 - [x] Set up a new git repository in your GitHub account
-- [x] Pick a text corpus dataset such as https://www.kaggle.com/kingburrito666/shakespeare-plays or from https://github.com/niderhoff/nlp-datasets.
-- [x] Choose a programming language (Python, C/C++, Java). **Python**
-- [x] Formulate ideas on how machine learning can be used to model distributions within the dataset.
-- [x] Build a Hidden Markov Model to be able to programmatically: 1.Generate new text from the text corpus. 2.Perform text prediction given a sequence of words.
-- [x] Document your process and results.
-- [x] Commit your source code, documentation and other supporting files to the git repository in GitHub.
+- [x] Pick two datasets from https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research
+- [x] Choose a programming language (Python, C/C++, Java) **Python**
+- [x] Formulate ideas on how neural networks can be used to accomplish the task for the specific dataset
+- [x] Build a neural network to model the prediction process programmatically
+- [x] Document your process and results
+- [x] Commit your source code, documentation and other supporting files to the git repository in GitHub
 
 ## Reference
 * MNIST - Wikipedia. https://en.wikipedia.org/wiki/MNIST_database
