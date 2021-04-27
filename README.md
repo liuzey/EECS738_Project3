@@ -54,7 +54,7 @@ python main.py 'gtsrb' -s 1 -p 1
 
 
 ## Result Analysis 
-Training records and results are saved in ['./records'](https://github.com/liuzey/EECS738_Project3/tree/main/records), which shows indeed a decrease in loss. This indicates the training is working in some sense. However, the accuracy doesn't show great improvements. This is a rough implementation od neural networks, which has much space for improvementes, especially gradient calculation. I remain these as my future work.
+Training records and results are saved in ['./records'](https://github.com/liuzey/EECS738_Project3/tree/main/records), which shows indeed a decrease in loss. This indicates the training is working in some sense. However, the accuracy doesn't show great improvements. This is a rough implementation of neural networks, which has much space for improvements, especially in gradient calculation. I remain these as my future work.
 
 ### MLP
 The structure of the MLP model used in MNIST task is 
